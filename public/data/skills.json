@@ -1,0 +1,1059 @@
+[
+  {
+    "id": "anthropics-skills-pdf",
+    "name": "pdf",
+    "summary": "读取与处理 PDF：提取文本和表格、合并拆分、加解密、加水印，还能给扫描件做 OCR、填写 PDF 表单。",
+    "purposes": [
+      "从 PDF 中提取文本和表格（保留版式），或把扫描件 OCR 成可检索文本",
+      "合并、拆分、旋转、加水印、加密解密 PDF 文件",
+      "填写或生成 PDF 表单（自带专用脚本）"
+    ],
+    "examples": [
+      "把一份合同 PDF 转成文本并总结要点",
+      "把 10 张发票 PDF 合并成一个文件并加公司水印",
+      "把扫描版纸质合同 OCR 后提取其中的表格"
+    ],
+    "audience": "需要批量处理或生成 PDF 的办公人员、法务财务岗位及开发者。",
+    "category": "writing",
+    "tags": ["PDF", "文档处理", "OCR"],
+    "tools": ["Claude Code", "Claude.ai（付费版内置）", "Claude API"],
+    "toolsSourceUrl": "https://github.com/anthropics/skills/blob/main/README.md",
+    "repo": "anthropics/skills",
+    "author": "anthropics",
+    "skillDir": "skills/pdf",
+    "skillDirUrl": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+    "skillMdUrl": "https://github.com/anthropics/skills/blob/main/skills/pdf/SKILL.md",
+    "license": "专有（源码可见，© 2025 Anthropic）",
+    "licenseUrl": "https://github.com/anthropics/skills/blob/main/skills/pdf/LICENSE.txt",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "在 Claude Code 中注册官方插件市场",
+          "安装 document-skills 插件（包含 PDF / Word / Excel / PPT 四个技能）",
+          "之后直接用自然语言提出 PDF 任务即可触发"
+        ],
+        "commands": [
+          "/plugin marketplace add anthropics/skills",
+          "/plugin install document-skills@anthropic-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      },
+      {
+        "tool": "Claude.ai",
+        "steps": [
+          "官方 README 说明：这些示例技能在付费版 Claude.ai 中已内置，无需手动安装"
+        ],
+        "commands": [],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      }
+    ],
+    "featured": true,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "anthropics-skills-docx",
+    "name": "docx",
+    "summary": "创建和编辑 Word 文档：生成带目录、页码、标题样式的专业报告，支持修订模式、批注与批量查找替换。",
+    "purposes": [
+      "从零生成带目录、标题样式、页码、信头的专业 Word 报告或信函",
+      "编辑现有文档：查找替换、插入图片、修订模式（tracked changes）、批注",
+      "读取并重组 Word 文档内容"
+    ],
+    "examples": [
+      "把这份会议纪要排版成带目录和页码的正式 Word 报告",
+      "在合同草稿里用修订模式标出我改的条款并加批注",
+      "把 50 个 Word 模板里的旧地址批量替换成新地址"
+    ],
+    "audience": "需要产出或修改正式 Word 文档的职场人士、行政法务人员及文档自动化开发者。",
+    "category": "writing",
+    "tags": ["Word", "文档处理", "办公自动化"],
+    "tools": ["Claude Code", "Claude.ai（付费版内置）", "Claude API"],
+    "toolsSourceUrl": "https://github.com/anthropics/skills/blob/main/README.md",
+    "repo": "anthropics/skills",
+    "author": "anthropics",
+    "skillDir": "skills/docx",
+    "skillDirUrl": "https://github.com/anthropics/skills/tree/main/skills/docx",
+    "skillMdUrl": "https://github.com/anthropics/skills/blob/main/skills/docx/SKILL.md",
+    "license": "专有（源码可见，© 2025 Anthropic）",
+    "licenseUrl": "https://github.com/anthropics/skills/blob/main/skills/docx/LICENSE.txt",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "在 Claude Code 中注册官方插件市场",
+          "安装 document-skills 插件（包含 PDF / Word / Excel / PPT 四个技能）",
+          "之后直接用自然语言提出 Word 文档任务即可触发"
+        ],
+        "commands": [
+          "/plugin marketplace add anthropics/skills",
+          "/plugin install document-skills@anthropic-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      },
+      {
+        "tool": "Claude.ai",
+        "steps": [
+          "官方 README 说明：这些示例技能在付费版 Claude.ai 中已内置，无需手动安装"
+        ],
+        "commands": [],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "anthropics-skills-xlsx",
+    "name": "xlsx",
+    "summary": "生成与清洗 Excel 表格：产出带公式、图表和专业格式的报表与财务模型，并自动重算校验公式正确性。",
+    "purposes": [
+      "从零生成带公式、图表、专业格式的 Excel 报表或财务模型",
+      "清洗混乱的 CSV / Excel 数据（错位表头、脏行、格式修复）",
+      "编辑现有工作簿并保留其原有约定，通过重算脚本校验零公式错误"
+    ],
+    "examples": [
+      "根据这份 CSV 销售数据做一个带汇总公式和图表的月度报表",
+      "帮我搭一个三年财务预测模型，输入项用蓝色、公式用黑色",
+      "把这个格式错乱的导出表整理成规范的 xlsx"
+    ],
+    "audience": "财务、数据分析岗位，以及需要产出可靠 Excel 交付物的开发者。",
+    "category": "data",
+    "tags": ["Excel", "表格", "财务模型"],
+    "tools": ["Claude Code", "Claude.ai（付费版内置）", "Claude API"],
+    "toolsSourceUrl": "https://github.com/anthropics/skills/blob/main/README.md",
+    "repo": "anthropics/skills",
+    "author": "anthropics",
+    "skillDir": "skills/xlsx",
+    "skillDirUrl": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+    "skillMdUrl": "https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md",
+    "license": "专有（源码可见，© 2025 Anthropic）",
+    "licenseUrl": "https://github.com/anthropics/skills/blob/main/skills/xlsx/LICENSE.txt",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "在 Claude Code 中注册官方插件市场",
+          "安装 document-skills 插件（包含 PDF / Word / Excel / PPT 四个技能）",
+          "之后直接布置表格任务即可触发"
+        ],
+        "commands": [
+          "/plugin marketplace add anthropics/skills",
+          "/plugin install document-skills@anthropic-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      },
+      {
+        "tool": "Claude.ai",
+        "steps": [
+          "官方 README 说明：这些示例技能在付费版 Claude.ai 中已内置，无需手动安装"
+        ],
+        "commands": [],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      }
+    ],
+    "featured": true,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "anthropics-skills-pptx",
+    "name": "pptx",
+    "summary": "制作与修改 PPT 演示文稿：从模板批量生成、增删页面、提取内容，并自带防文件损坏的校验流程。",
+    "purposes": [
+      "生成带原生图表、演讲者备注的演示文稿或融资 pitch deck",
+      "基于公司 .potx 模板批量填充、改稿、增删幻灯片",
+      "提取现有演示文稿的文字内容，用缩略图检视版式"
+    ],
+    "examples": [
+      "把这份商业计划做成 10 页带图表的融资演示文稿",
+      "用公司模板把这份文字稿排成一套 PPT",
+      "把这套 50 页 PPT 里第 3 页复制到末尾并更新数据"
+    ],
+    "audience": "需要做演示文稿的产品、市场、咨询、销售岗位及课件制作者。",
+    "category": "writing",
+    "tags": ["PPT", "演示文稿", "办公自动化"],
+    "tools": ["Claude Code", "Claude.ai（付费版内置）", "Claude API"],
+    "toolsSourceUrl": "https://github.com/anthropics/skills/blob/main/README.md",
+    "repo": "anthropics/skills",
+    "author": "anthropics",
+    "skillDir": "skills/pptx",
+    "skillDirUrl": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+    "skillMdUrl": "https://github.com/anthropics/skills/blob/main/skills/pptx/SKILL.md",
+    "license": "专有（源码可见，© 2025 Anthropic）",
+    "licenseUrl": "https://github.com/anthropics/skills/blob/main/skills/pptx/LICENSE.txt",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "在 Claude Code 中注册官方插件市场",
+          "安装 document-skills 插件（包含 PDF / Word / Excel / PPT 四个技能）",
+          "之后提到 deck / PPT 类任务即可触发"
+        ],
+        "commands": [
+          "/plugin marketplace add anthropics/skills",
+          "/plugin install document-skills@anthropic-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      },
+      {
+        "tool": "Claude.ai",
+        "steps": [
+          "官方 README 说明：这些示例技能在付费版 Claude.ai 中已内置，无需手动安装"
+        ],
+        "commands": [],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "anthropics-skills-skill-creator",
+    "name": "skill-creator",
+    "summary": "用来创建和改进 Skill 的技能：从需求访谈、编写 SKILL.md，到跑评测、做基准对比、优化触发描述的完整流程。",
+    "purposes": [
+      "从零创建一个新的 Agent Skill 并打磨触发描述",
+      "给已有技能跑评测（evals）、做基准对比和方差分析，量化改进效果",
+      "优化 description 提升技能触发准确率，或打包、校验技能"
+    ],
+    "examples": [
+      "帮我做一个能把会议记录转成待办清单的 skill，还要能测它好不好用",
+      "我的技能老是该触发时不触发，帮我优化描述",
+      "给这个技能跑 20 条测试用例并出一份评测报告"
+    ],
+    "audience": "想自定义技能的进阶用户、团队工具开发者和 AI 工程师。",
+    "category": "dev",
+    "tags": ["Skill 开发", "评测", "元工具"],
+    "tools": ["Claude Code", "Claude.ai（付费版内置）", "Claude API"],
+    "toolsSourceUrl": "https://github.com/anthropics/skills/blob/main/README.md",
+    "repo": "anthropics/skills",
+    "author": "anthropics",
+    "skillDir": "skills/skill-creator",
+    "skillDirUrl": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+    "skillMdUrl": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://github.com/anthropics/skills/blob/main/skills/skill-creator/LICENSE.txt",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "在 Claude Code 中注册官方插件市场",
+          "安装 example-skills 插件（包含 skill-creator / mcp-builder / webapp-testing 等）",
+          "提出创建或改进技能的需求即可触发"
+        ],
+        "commands": [
+          "/plugin marketplace add anthropics/skills",
+          "/plugin install example-skills@anthropic-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      }
+    ],
+    "featured": true,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "anthropics-skills-mcp-builder",
+    "name": "mcp-builder",
+    "summary": "指导构建高质量 MCP 服务器：调研、实现、评测、迭代四阶段，覆盖 TypeScript 与 Python 两种官方 SDK。",
+    "purposes": [
+      "为外部 SaaS 或内部 API 构建供大模型调用的 MCP server",
+      "设计工具命名、分页、错误信息等 MCP 工具接口细节",
+      "用随附脚本验证 MCP 连接并评测工具质量"
+    ],
+    "examples": [
+      "帮我用 TypeScript 写一个对接公司工单系统的 MCP server",
+      "把这个内部 REST API 包装成 Python FastMCP 服务",
+      "检查我的 MCP server 工具描述是否利于模型发现和调用"
+    ],
+    "audience": "做大模型工具集成、MCP 生态开发的工程师。",
+    "category": "dev",
+    "tags": ["MCP", "API 集成", "TypeScript", "Python"],
+    "tools": ["Claude Code", "Claude.ai（付费版内置）", "Claude API"],
+    "toolsSourceUrl": "https://github.com/anthropics/skills/blob/main/README.md",
+    "repo": "anthropics/skills",
+    "author": "anthropics",
+    "skillDir": "skills/mcp-builder",
+    "skillDirUrl": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+    "skillMdUrl": "https://github.com/anthropics/skills/blob/main/skills/mcp-builder/SKILL.md",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://github.com/anthropics/skills/blob/main/skills/mcp-builder/LICENSE.txt",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "在 Claude Code 中注册官方插件市场",
+          "安装 example-skills 插件",
+          "提出构建 MCP server 的需求即可触发"
+        ],
+        "commands": [
+          "/plugin marketplace add anthropics/skills",
+          "/plugin install example-skills@anthropic-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "anthropics-skills-webapp-testing",
+    "name": "webapp-testing",
+    "summary": "用 Playwright 测试本地网页应用：功能验证、UI 调试、截图，以及查看浏览器控制台日志。",
+    "purposes": [
+      "对本地运行的前端应用做端到端功能验证",
+      "调试 UI 行为：截图、检查 DOM、抓取浏览器控制台日志",
+      "在自动启停的开发服务器上批量执行 Playwright 自动化"
+    ],
+    "examples": [
+      "帮我验证这个登录页面在浏览器里能不能正常登录并截图",
+      "启动前后端两个服务，自动点一遍下单流程看有没有报错",
+      "检查我这个静态页面的按钮和链接是否都可点击"
+    ],
+    "audience": "前端、全栈开发者，以及做网页自动化测试的 QA。",
+    "category": "dev",
+    "tags": ["Playwright", "测试", "浏览器自动化"],
+    "tools": ["Claude Code", "Claude.ai（付费版内置）", "Claude API"],
+    "toolsSourceUrl": "https://github.com/anthropics/skills/blob/main/README.md",
+    "repo": "anthropics/skills",
+    "author": "anthropics",
+    "skillDir": "skills/webapp-testing",
+    "skillDirUrl": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+    "skillMdUrl": "https://github.com/anthropics/skills/blob/main/skills/webapp-testing/SKILL.md",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://github.com/anthropics/skills/blob/main/skills/webapp-testing/LICENSE.txt",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "在 Claude Code 中注册官方插件市场",
+          "安装 example-skills 插件",
+          "描述要测试的本地网页应用即可触发"
+        ],
+        "commands": [
+          "/plugin marketplace add anthropics/skills",
+          "/plugin install example-skills@anthropic-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/anthropics/skills/blob/main/README.md"
+      }
+    ],
+    "featured": true,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "addyosmani-agent-skills-spec-driven-development",
+    "name": "spec-driven-development",
+    "summary": "写代码前先立规格：通过 规格→计划→任务→实现 的关卡式流程，把模糊需求变成可评审的文档。",
+    "purposes": [
+      "新项目、新功能动工前先产出 PRD 或规格说明",
+      "需求模糊时显式列出假设并与用户逐条确认",
+      "把大需求拆成有依赖顺序的能力地图，再逐模块写规格"
+    ],
+    "examples": [
+      "我想做一个团队请假系统，先别写代码，帮我把需求规格理清楚",
+      "把这个大功能拆成可以独立交付的几个模块并排出开发顺序",
+      "帮我写一份包含目标、命令、测试策略和边界的规格文档"
+    ],
+    "audience": "希望 AI 编程先规格后代码的开发团队和技术负责人。",
+    "category": "dev",
+    "tags": ["需求规格", "工作流", "PRD"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI", "GitHub Copilot", "Windsurf"],
+    "toolsSourceUrl": "https://github.com/addyosmani/agent-skills#quick-start",
+    "repo": "addyosmani/agent-skills",
+    "author": "addyosmani",
+    "skillDir": "skills/spec-driven-development",
+    "skillDirUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/spec-driven-development",
+    "skillMdUrl": "https://github.com/addyosmani/agent-skills/blob/main/skills/spec-driven-development/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code（官方推荐）",
+        "steps": [
+          "注册插件市场",
+          "安装 agent-skills 插件（含全部 25 个技能）"
+        ],
+        "commands": [
+          "/plugin marketplace add addyosmani/agent-skills",
+          "/plugin install agent-skills@addy-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      },
+      {
+        "tool": "通用 skills CLI（README 称支持 70+ 工具）",
+        "steps": [
+          "安装全部 25 个技能（第 1 条命令）",
+          "也可以先浏览技能列表再决定（第 2 条命令）"
+        ],
+        "commands": [
+          "npx skills add addyosmani/agent-skills",
+          "npx skills add addyosmani/agent-skills --list"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      }
+    ],
+    "featured": true,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "addyosmani-agent-skills-interview-me",
+    "name": "interview-me",
+    "summary": "一次只问一个问题的需求访谈：把“帮我做个 X”追问成真正清晰的目标，避免 AI 默默替你脑补需求。",
+    "purposes": [
+      "需求只有一句话时，逐个追问出为谁做、为什么做、成功标准是什么",
+      "用户主动要求拷问、压力测试自己的想法时使用",
+      "防止 AI 在需求不清时自行填补假设、直接开写"
+    ],
+    "examples": [
+      "我要个数据看板——interview me，先问清楚我到底要看什么",
+      "grill me：我打算给系统加缓存，先帮我确认这是不是真问题",
+      "在动手写计划之前，一次一个问题把我的真实目标问明白"
+    ],
+    "audience": "产品经理、创业者，以及任何想用 AI 澄清需求的人（不需要技术背景）。",
+    "category": "efficiency",
+    "tags": ["需求澄清", "沟通", "访谈"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI", "GitHub Copilot", "Windsurf"],
+    "toolsSourceUrl": "https://github.com/addyosmani/agent-skills#quick-start",
+    "repo": "addyosmani/agent-skills",
+    "author": "addyosmani",
+    "skillDir": "skills/interview-me",
+    "skillDirUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/interview-me",
+    "skillMdUrl": "https://github.com/addyosmani/agent-skills/blob/main/skills/interview-me/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code（官方推荐）",
+        "steps": [
+          "注册插件市场",
+          "安装 agent-skills 插件"
+        ],
+        "commands": [
+          "/plugin marketplace add addyosmani/agent-skills",
+          "/plugin install agent-skills@addy-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      },
+      {
+        "tool": "通用 skills CLI",
+        "steps": [
+          "只安装本技能（第 1 条命令，README 原文示例）",
+          "或安装全部 25 个技能（第 2 条命令）"
+        ],
+        "commands": [
+          "npx skills add addyosmani/agent-skills --skill interview-me",
+          "npx skills add addyosmani/agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      }
+    ],
+    "featured": true,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "addyosmani-agent-skills-test-driven-development",
+    "name": "test-driven-development",
+    "summary": "严格执行 红-绿-重构 的测试驱动开发：先写失败测试，再写最小实现，用测试证明每一处修改有效。",
+    "purposes": [
+      "写任何新逻辑前先写失败测试，再写最小实现让其通过",
+      "修 bug 时先写一个能复现问题的测试来锁定它",
+      "改动现有功能时用测试证明行为没有回归"
+    ],
+    "examples": [
+      "帮我用测试驱动开发实现这个购物车折扣规则",
+      "这个接口偶尔算错金额，先写个测试复现再修",
+      "重构这个模块，但全程要有测试护航"
+    ],
+    "audience": "各语言开发者，尤其是希望 AI 产出可验证代码的工程师。",
+    "category": "dev",
+    "tags": ["TDD", "测试", "重构"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI", "GitHub Copilot", "Windsurf"],
+    "toolsSourceUrl": "https://github.com/addyosmani/agent-skills#quick-start",
+    "repo": "addyosmani/agent-skills",
+    "author": "addyosmani",
+    "skillDir": "skills/test-driven-development",
+    "skillDirUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/test-driven-development",
+    "skillMdUrl": "https://github.com/addyosmani/agent-skills/blob/main/skills/test-driven-development/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code（官方推荐）",
+        "steps": [
+          "注册插件市场",
+          "安装 agent-skills 插件"
+        ],
+        "commands": [
+          "/plugin marketplace add addyosmani/agent-skills",
+          "/plugin install agent-skills@addy-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      },
+      {
+        "tool": "通用 skills CLI",
+        "steps": [
+          "只安装本技能（第 1 条命令，README 原文示例）",
+          "或安装全部 25 个技能（第 2 条命令）"
+        ],
+        "commands": [
+          "npx skills add addyosmani/agent-skills --skill test-driven-development",
+          "npx skills add addyosmani/agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "addyosmani-agent-skills-debugging-and-error-recovery",
+    "name": "debugging-and-error-recovery",
+    "summary": "系统化根因排查流程：先保护现场再逐步定位，修复后补上防回归测试，告别盲目猜错。",
+    "purposes": [
+      "测试失败、构建挂掉时按流程定位根因，而不是瞎猜",
+      "系统性排查昨天还好好的这类回归问题和偶发 bug",
+      "修复后加防护（回归测试、监控）再恢复开发"
+    ],
+    "examples": [
+      "我的测试突然红了，按系统化流程帮我找出原因",
+      "这个接口只在生产环境偶发超时，帮我一步步排查",
+      "构建失败了，先别加新功能，先定位问题并加个防回归测试"
+    ],
+    "audience": "所有需要排查故障的开发者、运维和 QA。",
+    "category": "dev",
+    "tags": ["调试", "排障", "根因分析"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI", "GitHub Copilot", "Windsurf"],
+    "toolsSourceUrl": "https://github.com/addyosmani/agent-skills#quick-start",
+    "repo": "addyosmani/agent-skills",
+    "author": "addyosmani",
+    "skillDir": "skills/debugging-and-error-recovery",
+    "skillDirUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/debugging-and-error-recovery",
+    "skillMdUrl": "https://github.com/addyosmani/agent-skills/blob/main/skills/debugging-and-error-recovery/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code（官方推荐）",
+        "steps": [
+          "注册插件市场",
+          "安装 agent-skills 插件"
+        ],
+        "commands": [
+          "/plugin marketplace add addyosmani/agent-skills",
+          "/plugin install agent-skills@addy-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      },
+      {
+        "tool": "通用 skills CLI",
+        "steps": [
+          "安装全部 25 个技能（第 1 条命令）",
+          "也可以先浏览技能列表再决定（第 2 条命令）"
+        ],
+        "commands": [
+          "npx skills add addyosmani/agent-skills",
+          "npx skills add addyosmani/agent-skills --list"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "addyosmani-agent-skills-code-review-and-quality",
+    "name": "code-review-and-quality",
+    "summary": "合并前的五维代码评审：正确性、可读性、架构、安全、性能，并把修改建议按严重程度分级。",
+    "purposes": [
+      "合并前对 PR 或 diff 做五个维度的结构化评审",
+      "审查另一个 AI agent 或同事写的代码",
+      "改动过大时给出拆分策略建议"
+    ],
+    "examples": [
+      "帮我按五个维度评审这个 PR，标出必须改和可改可不改的",
+      "另一个 AI 生成了这段代码，合并前把把关",
+      "这次改动 800 行，告诉我该不该拆、怎么拆"
+    ],
+    "audience": "需要评审代码（包括 AI 生成代码）的工程师、技术负责人和 QA。",
+    "category": "dev",
+    "tags": ["代码评审", "质量", "PR"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI", "GitHub Copilot", "Windsurf"],
+    "toolsSourceUrl": "https://github.com/addyosmani/agent-skills#quick-start",
+    "repo": "addyosmani/agent-skills",
+    "author": "addyosmani",
+    "skillDir": "skills/code-review-and-quality",
+    "skillDirUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/code-review-and-quality",
+    "skillMdUrl": "https://github.com/addyosmani/agent-skills/blob/main/skills/code-review-and-quality/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code（官方推荐）",
+        "steps": [
+          "注册插件市场",
+          "安装 agent-skills 插件"
+        ],
+        "commands": [
+          "/plugin marketplace add addyosmani/agent-skills",
+          "/plugin install agent-skills@addy-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      },
+      {
+        "tool": "通用 skills CLI",
+        "steps": [
+          "只安装本技能（第 1 条命令，README 原文示例）",
+          "或安装全部 25 个技能（第 2 条命令）"
+        ],
+        "commands": [
+          "npx skills add addyosmani/agent-skills --skill code-review-and-quality",
+          "npx skills add addyosmani/agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "addyosmani-agent-skills-performance-optimization",
+    "name": "performance-optimization",
+    "summary": "先测量再优化的性能工作流：覆盖 Core Web Vitals、后端接口和数据库慢查询，优化后加监控防回退。",
+    "purposes": [
+      "页面加载慢、Core Web Vitals 不达标时先测量再针对性优化",
+      "后端接口慢：计时、定位 N+1 查询等数据库瓶颈",
+      "优化后复测，并加监控或测试防止性能回退"
+    ],
+    "examples": [
+      "我的电商首页 LCP 四秒多，帮我测量并优化到 2.5 秒内",
+      "这个列表接口要 2 秒，查一下是不是 N+1 查询",
+      "发版后页面变慢了，帮我对比性能数据定位回退"
+    ],
+    "audience": "前端、全栈工程师和关注 Web 性能的产品技术团队。",
+    "category": "dev",
+    "tags": ["性能优化", "Web 性能", "数据库"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI", "GitHub Copilot", "Windsurf"],
+    "toolsSourceUrl": "https://github.com/addyosmani/agent-skills#quick-start",
+    "repo": "addyosmani/agent-skills",
+    "author": "addyosmani",
+    "skillDir": "skills/performance-optimization",
+    "skillDirUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/performance-optimization",
+    "skillMdUrl": "https://github.com/addyosmani/agent-skills/blob/main/skills/performance-optimization/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code（官方推荐）",
+        "steps": [
+          "注册插件市场",
+          "安装 agent-skills 插件"
+        ],
+        "commands": [
+          "/plugin marketplace add addyosmani/agent-skills",
+          "/plugin install agent-skills@addy-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      },
+      {
+        "tool": "通用 skills CLI",
+        "steps": [
+          "安装全部 25 个技能（第 1 条命令）",
+          "也可以先浏览技能列表再决定（第 2 条命令）"
+        ],
+        "commands": [
+          "npx skills add addyosmani/agent-skills",
+          "npx skills add addyosmani/agent-skills --list"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "addyosmani-agent-skills-security-and-hardening",
+    "name": "security-and-hardening",
+    "summary": "面向威胁建模的安全加固：按 OWASP 常见风险审计输入处理、登录流程与第三方依赖。",
+    "purposes": [
+      "开发登录、表单、上传、Webhook 等接收不可信输入的功能时做安全加固",
+      "按 OWASP Top 10 审计现有处理器和登录流程",
+      "依赖漏洞审计、供应链风险评估、个人数据合规处理"
+    ],
+    "examples": [
+      "帮我检查这个登录接口能不能防住 OWASP 常见攻击",
+      "这个文件上传功能有没有安全隐患，按威胁建模过一遍",
+      "npm audit 报了几个高危漏洞，帮我分级并处理"
+    ],
+    "audience": "后端、全栈工程师、安全审计人员和处理用户敏感数据的团队。",
+    "category": "dev",
+    "tags": ["安全", "OWASP", "依赖审计"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI", "GitHub Copilot", "Windsurf"],
+    "toolsSourceUrl": "https://github.com/addyosmani/agent-skills#quick-start",
+    "repo": "addyosmani/agent-skills",
+    "author": "addyosmani",
+    "skillDir": "skills/security-and-hardening",
+    "skillDirUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/security-and-hardening",
+    "skillMdUrl": "https://github.com/addyosmani/agent-skills/blob/main/skills/security-and-hardening/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code（官方推荐）",
+        "steps": [
+          "注册插件市场",
+          "安装 agent-skills 插件"
+        ],
+        "commands": [
+          "/plugin marketplace add addyosmani/agent-skills",
+          "/plugin install agent-skills@addy-agent-skills"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      },
+      {
+        "tool": "通用 skills CLI",
+        "steps": [
+          "安装全部 25 个技能（第 1 条命令）",
+          "也可以先浏览技能列表再决定（第 2 条命令）"
+        ],
+        "commands": [
+          "npx skills add addyosmani/agent-skills",
+          "npx skills add addyosmani/agent-skills --list"
+        ],
+        "sourceUrl": "https://github.com/addyosmani/agent-skills#quick-start"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "obra-superpowers-brainstorming",
+    "name": "brainstorming",
+    "summary": "把模糊的想法聊成完整的设计方案：通过自然对话逐步明确意图、需求和设计，确认后再进入实现。",
+    "purposes": [
+      "做任何创造性工作（新功能、新组件、行为变更）之前，先把想法和约束聊清楚",
+      "通过追问和复述，把一句话需求变成可读的设计稿",
+      "获得使用者的确认后再动手，避免返工"
+    ],
+    "examples": [
+      "我想给 App 加个夜间模式，先别写代码，帮我把方案聊清楚",
+      "帮我把这个点子整理成一份可以给工程师看的设计说明",
+      "这个功能有几种做法？各自的取舍是什么"
+    ],
+    "audience": "想让 AI 先想明白再动手的开发者和产品创作者。",
+    "category": "efficiency",
+    "tags": ["头脑风暴", "设计讨论", "需求澄清"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI"],
+    "toolsSourceUrl": "https://github.com/obra/superpowers#installation",
+    "repo": "obra/superpowers",
+    "author": "obra",
+    "skillDir": "skills/brainstorming",
+    "skillDirUrl": "https://github.com/obra/superpowers/tree/main/skills/brainstorming",
+    "skillMdUrl": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/obra/superpowers/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "通过官方插件市场安装 Superpowers 插件（一次安装全部 15 个技能）"
+        ],
+        "commands": [
+          "/plugin install superpowers@claude-plugins-official"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      },
+      {
+        "tool": "Cursor",
+        "steps": [
+          "在 Cursor Agent 对话框中安装插件（第 1 条命令）",
+          "或在插件市场中搜索 superpowers 安装"
+        ],
+        "commands": [
+          "/add-plugin superpowers"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      }
+    ],
+    "featured": true,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "obra-superpowers-writing-plans",
+    "name": "writing-plans",
+    "summary": "在动代码之前写实现计划：把规格拆成一个个小任务，写清文件、接口和验收测试，让任何人都能照着做。",
+    "purposes": [
+      "拿到规格或需求后、写代码之前，产出一份可执行的实现计划",
+      "把多步骤任务拆成小块，每块写清改哪些文件、什么接口、用什么测试验证",
+      "强调 DRY、YAGNI 和测试驱动，频繁提交"
+    ],
+    "examples": [
+      "规格已经定了，帮我写一份逐任务的实现计划",
+      "把这个重构需求拆成可以一步步执行并验证的小任务",
+      "计划要细到一个不了解项目的工程师也能照着做"
+    ],
+    "audience": "做中大型功能开发、希望过程可控的工程师。",
+    "category": "dev",
+    "tags": ["实现计划", "TDD", "工作流"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI"],
+    "toolsSourceUrl": "https://github.com/obra/superpowers#installation",
+    "repo": "obra/superpowers",
+    "author": "obra",
+    "skillDir": "skills/writing-plans",
+    "skillDirUrl": "https://github.com/obra/superpowers/tree/main/skills/writing-plans",
+    "skillMdUrl": "https://github.com/obra/superpowers/blob/main/skills/writing-plans/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/obra/superpowers/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "通过官方插件市场安装 Superpowers 插件（一次安装全部 15 个技能）"
+        ],
+        "commands": [
+          "/plugin install superpowers@claude-plugins-official"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      },
+      {
+        "tool": "Cursor",
+        "steps": [
+          "在 Cursor Agent 对话框中安装插件（第 1 条命令）",
+          "或在插件市场中搜索 superpowers 安装"
+        ],
+        "commands": [
+          "/add-plugin superpowers"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "obra-superpowers-executing-plans",
+    "name": "executing-plans",
+    "summary": "在当前会话里逐任务执行实现计划：自己作为实现者按步骤推进，最后对整个分支做一次全新视角的评审。",
+    "purposes": [
+      "已有实现计划时，在当前会话中逐任务落地执行",
+      "不使用子代理时保证执行过程仍然有序、可追踪",
+      "完成后对整个分支做一次完整评审再收尾"
+    ],
+    "examples": [
+      "按这份计划开始实现，一步一步来，每步都验证",
+      "不用子代理，就在这个会话里把计划执行完",
+      "执行完帮我整体检查一遍这个分支"
+    ],
+    "audience": "按计划推进实现、希望保持节奏的工程师。",
+    "category": "dev",
+    "tags": ["计划执行", "工作流"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI"],
+    "toolsSourceUrl": "https://github.com/obra/superpowers#installation",
+    "repo": "obra/superpowers",
+    "author": "obra",
+    "skillDir": "skills/executing-plans",
+    "skillDirUrl": "https://github.com/obra/superpowers/tree/main/skills/executing-plans",
+    "skillMdUrl": "https://github.com/obra/superpowers/blob/main/skills/executing-plans/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/obra/superpowers/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "通过官方插件市场安装 Superpowers 插件（一次安装全部 15 个技能）"
+        ],
+        "commands": [
+          "/plugin install superpowers@claude-plugins-official"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      },
+      {
+        "tool": "Cursor",
+        "steps": [
+          "在 Cursor Agent 对话框中安装插件（第 1 条命令）",
+          "或在插件市场中搜索 superpowers 安装"
+        ],
+        "commands": [
+          "/add-plugin superpowers"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "obra-superpowers-using-git-worktrees",
+    "name": "using-git-worktrees",
+    "summary": "开始新功能前先隔离工作区：优先使用平台原生隔离工具，没有时回退到 git worktree，避免互相干扰。",
+    "purposes": [
+      "开始功能开发或执行实现计划前，确保工作在独立工作区进行",
+      "检测已有的隔离环境，避免重复创建",
+      "多任务并行时互不污染主工作区"
+    ],
+    "examples": [
+      "我要同时修两个 bug，帮我各开一个隔离工作区",
+      "开始这个计划前先确认不会动到主分支的工作区",
+      "教 AI 用 worktree 同时推进多个功能"
+    ],
+    "audience": "经常并行推进多项工作的开发者。",
+    "category": "dev",
+    "tags": ["Git", "工作区隔离", "并行开发"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI"],
+    "toolsSourceUrl": "https://github.com/obra/superpowers#installation",
+    "repo": "obra/superpowers",
+    "author": "obra",
+    "skillDir": "skills/using-git-worktrees",
+    "skillDirUrl": "https://github.com/obra/superpowers/tree/main/skills/using-git-worktrees",
+    "skillMdUrl": "https://github.com/obra/superpowers/blob/main/skills/using-git-worktrees/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/obra/superpowers/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "通过官方插件市场安装 Superpowers 插件（一次安装全部 15 个技能）"
+        ],
+        "commands": [
+          "/plugin install superpowers@claude-plugins-official"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      },
+      {
+        "tool": "Cursor",
+        "steps": [
+          "在 Cursor Agent 对话框中安装插件（第 1 条命令）",
+          "或在插件市场中搜索 superpowers 安装"
+        ],
+        "commands": [
+          "/add-plugin superpowers"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "obra-superpowers-verification-before-completion",
+    "name": "verification-before-completion",
+    "summary": "宣布完成之前先拿证据：必须实际运行验证命令并确认输出，才能说“修好了”“通过了”。",
+    "purposes": [
+      "在声称工作完成、修复生效或测试通过之前，先运行验证命令",
+      "杜绝“看起来应该没问题”式的口头保证",
+      "提交或建 PR 之前的最后一道检查"
+    ],
+    "examples": [
+      "修完这个 bug 别急着说好了，先跑一遍测试给我看",
+      "提交前验证一下构建和测试真的全部通过",
+      "帮 AI 养成先验证再汇报的习惯"
+    ],
+    "audience": "希望 AI 输出有实证、可信赖的开发者与团队。",
+    "category": "dev",
+    "tags": ["验证", "质量", "工作流"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI"],
+    "toolsSourceUrl": "https://github.com/obra/superpowers#installation",
+    "repo": "obra/superpowers",
+    "author": "obra",
+    "skillDir": "skills/verification-before-completion",
+    "skillDirUrl": "https://github.com/obra/superpowers/tree/main/skills/verification-before-completion",
+    "skillMdUrl": "https://github.com/obra/superpowers/blob/main/skills/verification-before-completion/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/obra/superpowers/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "通过官方插件市场安装 Superpowers 插件（一次安装全部 15 个技能）"
+        ],
+        "commands": [
+          "/plugin install superpowers@claude-plugins-official"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      },
+      {
+        "tool": "Cursor",
+        "steps": [
+          "在 Cursor Agent 对话框中安装插件（第 1 条命令）",
+          "或在插件市场中搜索 superpowers 安装"
+        ],
+        "commands": [
+          "/add-plugin superpowers"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  },
+  {
+    "id": "obra-superpowers-systematic-debugging",
+    "name": "systematic-debugging",
+    "summary": "遇到 bug 先找根因再动手：任何修复之前必须定位根本原因，治标的症状修复被视为失败。",
+    "purposes": [
+      "遇到 bug、测试失败或异常行为时，先走系统化定位流程",
+      "坚持找到根本原因之后才允许提出修复方案",
+      "避免头痛医头的症状式修复"
+    ],
+    "examples": [
+      "这个测试偶发失败，先帮我定位根因再说怎么修",
+      "别急着改代码，先弄清这个异常到底是谁抛出来的",
+      "帮我分析这个 bug 的最小复现路径"
+    ],
+    "audience": "受够了一次次试错式修复的开发者。",
+    "category": "dev",
+    "tags": ["调试", "根因分析", "工作流"],
+    "tools": ["Claude Code", "Cursor", "Codex", "Gemini CLI"],
+    "toolsSourceUrl": "https://github.com/obra/superpowers#installation",
+    "repo": "obra/superpowers",
+    "author": "obra",
+    "skillDir": "skills/systematic-debugging",
+    "skillDirUrl": "https://github.com/obra/superpowers/tree/main/skills/systematic-debugging",
+    "skillMdUrl": "https://github.com/obra/superpowers/blob/main/skills/systematic-debugging/SKILL.md",
+    "license": "MIT",
+    "licenseUrl": "https://github.com/obra/superpowers/blob/main/LICENSE",
+    "installs": [
+      {
+        "tool": "Claude Code",
+        "steps": [
+          "通过官方插件市场安装 Superpowers 插件（一次安装全部 15 个技能）"
+        ],
+        "commands": [
+          "/plugin install superpowers@claude-plugins-official"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      },
+      {
+        "tool": "Cursor",
+        "steps": [
+          "在 Cursor Agent 对话框中安装插件（第 1 条命令）",
+          "或在插件市场中搜索 superpowers 安装"
+        ],
+        "commands": [
+          "/add-plugin superpowers"
+        ],
+        "sourceUrl": "https://github.com/obra/superpowers#installation"
+      }
+    ],
+    "featured": false,
+    "addedAt": "2026-10-02",
+    "verifiedAt": "2026-10-02"
+  }
+]

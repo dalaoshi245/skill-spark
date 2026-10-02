@@ -1,0 +1,55 @@
+name: 部署网站到 GitHub Pages
+
+# 每次推送 main 分支（如手动更新内容）自动构建并部署；也支持在 Actions 页面手动触发。
+# 注意：sync.yml 用 GITHUB_TOKEN 提交的数据变更不会触发本工作流（GitHub 为防循环默认不触发），
+# 数据同步后的构建与部署由 sync.yml 自行完成，两边互不循环。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # 允许在 Actions 页面手动触发
+
+permissions:
+  contents: read
+  pages: write # 部署到 GitHub Pages 所需
+  id-token: write # Pages 部署身份验证所需
+
+# 同一时间只保留一次部署，新部署会取消进行中的旧部署
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 生产构建
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
