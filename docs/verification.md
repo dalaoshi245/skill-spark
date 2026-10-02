@@ -71,3 +71,19 @@
 | 时区 | sync.yml 定时 00:10 UTC = 北京时间 08:10（GitHub 定时任务可能延迟几分钟到半小时） | 配置核对 |
 
 **仍未验证（需部署后进行）**：线上访问、手机真机、Actions 实际运行一次。详见 [maintenance.md](maintenance.md) 待办表。
+
+---
+
+## 第四轮：部署实测（2026-10-02）
+
+| 检查项 | 结果 |
+| --- | --- |
+| 远程仓库创建（dalaoshi245/skill-spark，公开）+ Pages Source 设为 GitHub Actions | 完成（浏览器实测） |
+| 推送 main 分支 | 完成（HTTPS 旧凭证失效，改用 SSH 密钥；本机生成 ed25519 密钥并添加到 GitHub） |
+| 首次自动部署（push 触发 deploy.yml） | 成功，run 36982460938 |
+| 公开网址 `https://dalaoshi245.github.io/skill-spark/` | HTTP 200，标题与 og 标签正确 |
+| 线上数据与资源 | skills.json / repos.json / meta.json / favicon / JS / CSS 全部 200 |
+| 手动触发同步工作流（Run workflow） | 成功，run 36982834959；产生提交 "chore(data): 同步 GitHub 仓库指标" 并自动重新部署 |
+| 数据→部署→页面衔接 | 线上 meta.json 的 lastSuccessAt 已更新为 2026-10-02T08:13:47Z，repos.json 3 个仓库在位 |
+
+**待人工确认**：手机或另一浏览器访问线上网址，检查首页/搜索/分类/排行/详情与复制按钮（未验证前不标记为通过）。

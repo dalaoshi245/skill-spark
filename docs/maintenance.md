@@ -11,15 +11,16 @@
 - 资源路径：✅ 全部相对路径（`./assets/`、`./data/`、`./favicon.svg`），适配子目录托管
 - 分享信息：✅ title / description / og:title / og:description / og:type / og:site_name（og:image 未配置，见待办）
 - SPA 刷新：✅ 使用 HashRouter，任意详情地址直接打开、刷新均命中根路径 index.html，无需服务端回退配置
-- 线上部署：⏳ 待用户确认方案后执行（见 docs/DEPLOY.md）
+- 线上部署：✅ 已发布 https://dalaoshi245.github.io/skill-spark/（2026-10-02 实测：首页 200、数据/资源 200、手动同步全链路成功）
+- 仓库：https://github.com/dalaoshi245/skill-spark（公开）
 
 ## 2. 待核实 / 待办条目（按建议顺序）
 
 | 优先级 | 事项 | 说明 | 状态 |
 | --- | --- | --- | --- |
-| 高 | 真机验证 | 部署完成后用手机或另一浏览器访问公开网址，核对首页/搜索/详情/排行 | 待办（本地 375px CSS 断点已确认） |
+| 高 | 真机验证 | 用手机或另一浏览器访问公开网址，核对首页/搜索/详情/排行与复制按钮 | 待办 |
 | 高 | 补充"设计创作"分类 | 该分类当前无收录内容，首页切到该分类会显示空态；候选见 [candidates.md](candidates.md) | 待办 |
-| 中 | 手动运行一次同步工作流 | 推送仓库后到 Actions 手动触发 sync.yml，核对数据变化 → 提交 → 部署 → 页面同步时间是否衔接 | 待办（部署后） |
+| 低 | 钥匙串旧 HTTPS 凭证失效 | 本机 macOS 钥匙串存的 GitHub HTTPS 凭证已失效，git 推送已改用 SSH（id_ed25519），无需处理；若日后 HTTPS 推送报 "Invalid username or token" 属正常，用 SSH 即可 | 记录在案 |
 | 中 | 候选 Skill 逐一核实 | candidates.md 中的候选必须先核实 SKILL.md 与官方安装命令，再写入 skills.json | 持续 |
 | 低 | og:image 分享图 | 未配置社交分享缩略图；如需要可生成 1200×630 图片放 `public/` 并在 index.html 加 `og:image` | 可选 |
 | 低 | 自定义域名 | 当前使用 `用户名.github.io/skill-spark/`；如需自有域名再配置 | 可选 |
