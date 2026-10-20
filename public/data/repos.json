@@ -1,26 +1,26 @@
 {
   "anthropics/skills": {
-    "stars": 182036,
-    "forks": 21575,
+    "stars": 182289,
+    "forks": 21597,
     "pushedAt": "2026-10-09T18:45:52Z",
     "archived": false,
     "license": null,
-    "fetchedAt": "2026-10-19T04:32:42.122Z"
+    "fetchedAt": "2026-10-20T04:41:50.431Z"
   },
   "addyosmani/agent-skills": {
-    "stars": 108266,
-    "forks": 11284,
+    "stars": 108678,
+    "forks": 11333,
     "pushedAt": "2026-10-13T20:24:07Z",
     "archived": false,
     "license": "MIT",
-    "fetchedAt": "2026-10-19T04:32:42.122Z"
+    "fetchedAt": "2026-10-20T04:41:50.431Z"
   },
   "obra/superpowers": {
-    "stars": 301720,
-    "forks": 26942,
-    "pushedAt": "2026-10-10T03:03:30Z",
+    "stars": 302205,
+    "forks": 26980,
+    "pushedAt": "2026-10-20T03:54:16Z",
     "archived": false,
     "license": "MIT",
-    "fetchedAt": "2026-10-19T04:32:42.122Z"
+    "fetchedAt": "2026-10-20T04:41:50.431Z"
   }
 }
